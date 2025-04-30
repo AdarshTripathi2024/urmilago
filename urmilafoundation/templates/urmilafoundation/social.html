@@ -1,0 +1,150 @@
+   {% extends 'urmilafoundation/base.html' %}
+   {% block content %}
+   {% load static %}
+   
+   <!-- ==== banner section start ==== -->
+   <section class="common-banner">
+    <div class="container">
+       <div class="row">
+          <div class="common-banner__content text-center">
+             <span class="sub-title"><i class="icon-donation"></i>URMILA FOUNDATION</span>
+             <h2 class="title-animation">Social Activities</h2>
+          </div>
+       </div>
+    </div>
+    <div class="banner-bg">
+       <img src="{% static 'images/banner/banner-bg.png' %}" alt="Image">
+    </div>
+    <div class="shape">
+       <img src="{% static 'images/shape.png' %}" alt="Image">
+    </div>
+    <div class="sprade" data-aos="zoom-in" data-aos-duration="1000">
+       <img src="{% static 'images/sprade-base.png' %}" alt="Image" class="base-img">
+    </div>
+ </section>
+ <!-- ==== / banner section end ==== -->
+ <!-- ==== cause details section start ==== -->
+ <div class="cm-details">
+    <div class="container">
+       <div class="row gutter-60">
+          <div class="col-12 col-xl-8">
+             <div class="cm-details__content">
+                <div class="cm-details__poster" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                   <img src="{% static 'images/event/poster.png' %}" alt="Image">
+                </div>
+                <div class="cm-group cta">
+                  <h3 class="title-animation">Urmila Foundation Social Activities</h3>
+                  <p>Urmila Foundation has been tirelessly working to uplift the underprivileged through various social initiatives that create long-lasting impact. Our social activities are driven by compassion, empathy, and a deep commitment to human dignity.</p>
+               </div>
+               <div class="cm-group cta">
+                  <h5 class="title-animation text-dark">Health Camps & Medical Aid</h5>
+                  <p class="mb-4">We regularly organize free health check-up camps, blood donation drives, and medical assistance programs in rural and underserved areas. From distributing essential medicines to supporting critical treatments — we ensure no one is left behind.</p>
+                  <h5 class="title-animation text-dark">Child Education Drives</h5>
+                  <p class="mb-4">Our team conducts awareness campaigns promoting education, distributes school kits, and supports underprivileged children with scholarships and digital learning tools.</p>
+                  <h5 class="title-animation text-dark">Women Empowerment Workshops</h5>
+                  <p class="mb-4">We host workshops focused on vocational training, self-help groups, and leadership development — enabling women to gain financial independence and social confidence.</p>
+                  <h5 class="title-animation text-dark"> Environmental Activities</h5>
+                  <p class="mb-4">We actively engage in tree plantation drives, cleanliness campaigns, and plastic-free awareness programs — fostering a sustainable and green future.</p>
+                  <div class="cm-details__list">
+                     <ul>
+                        <li><i class="icon-circle-check"></i>Animal Welfare & Feeding Drives</li>
+                        <li><i class="icon-circle-check"></i>Rainwater Harvesting Awareness</li>
+                        <li><i class="icon-circle-check"></i>Old-Age Home Visits </li>
+                        <li><i class="icon-circle-check"></i>Free Health Screening Camps</li>
+                        <li><i class="icon-circle-check"></i>Blood Donation Camps</li>
+                        <li><i class="icon-circle-check"></i>Cleanliness Programs </li>
+                     </ul>
+                  </div>
+               </div>
+                <div class="cm-img-group cta">
+                   <div class="cm-img-single">
+                      <img src="{% static 'images/event/pp-one.png' %}" alt="Image">
+                   </div>
+                   <div class="cm-img-single">
+                      <img src="{% static 'images/event/pp-two.png' %}" alt="Image">
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-12 col-xl-4">
+             <div class="cm-details__sidebar">
+                <div class="cm-sidebar-widget" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                   <div class="intro">
+                      <h5>search here</h5>
+                   </div>
+                   <form action="#" method="post">
+                      <input type="text" name="search-product" id="searchProduct" placeholder="Search Here..."
+                         required>
+                      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                   </form>
+                </div>
+                <div class="cm-sidebar-widget">
+                  <div class="intro">
+                     <h5>Our Blogs</h5>
+                  </div>
+                  <div class="cm-sidebar-post">
+                     <div class="single-item">
+                        <div class="thumb">
+                              <img src="{% static 'images/blog/ph-one.png' %}" alt="Image">
+                        </div>
+                        <div class="content">
+                           <p><i class="fa-solid fa-calendar-days"></i> <span>November 19, 2024</span>
+                           </p>
+                           <p><a href="{% url 'our-blogs' %}">Where Innovation Meets Foundation</a>
+                           </p>
+                        </div>
+                     </div>
+                     <div class="single-item">
+                        <div class="thumb">
+                              <img src="{% static 'images/blog/ph-two.png' %}" alt="Image">
+                        </div>
+                        <div class="content">
+                           <p><i class="fa-solid fa-calendar-days"></i> <span>November 19, 2024</span>
+                           </p>
+                           <p><a href="{% url 'our-blogs' %}">Where Innovation Meets Foundation</a>
+                           </p>
+                        </div>
+                     </div>
+                     <div class="single-item">
+                        <div class="thumb">
+                              <img src="{% static 'images/blog/three.png' %}" alt="Image">
+                        </div>
+                        <div class="content">
+                           <p><i class="fa-solid fa-calendar-days"></i> <span>November 22, 2024</span>
+                           </p>
+                           <p><a href="{% url 'our-blogs' %}">Structures That Stand,
+                                 Dreams That Soar</a>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="cm-sidebar-widget">
+                  <div class="intro">
+                     <h5>Visit Us</h5>
+                  </div>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29755.757235996844!2d81.627762!3d21.213217!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd64866a264d%3A0x874426db0ae72a76!2sUrmila%20Memorial%20Hospital!5e0!3m2!1sen!2sin!4v1744876200365!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+                <div class="cm-sidebar-overview" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                   <div class="cm-logo">
+                      <img src="{% static 'images/event/logo.png' %}" alt="Image">
+                   </div>
+                   <div class="cm-content">
+                     <p>Small Donations Bigger Impact</p>
+                     <h4>Donate to Urmila Foundation
+                     </h4>
+                  </div>
+                  <div class="cm-cta">
+                     <a href="{% url 'contact-us' %}" aria-label="contact us" title="contact us" class="btn--primary">
+                        Contact Us <i class="fa-solid fa-arrow-right"></i>
+                     </a>
+                  </div>
+                   <img src="{% static 'images/event/overview.png' %}" alt="Image" class="parallax-image">
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- ==== / cause details section end ==== -->
+  {% endblock %}

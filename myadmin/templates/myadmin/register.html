@@ -1,0 +1,8 @@
+
+            <h2 class="title-animation">Register Admin</h2>
+            <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+            </form>
+        

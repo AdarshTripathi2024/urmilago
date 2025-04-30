@@ -1,0 +1,106 @@
+{% extends 'urmilafoundation/base.html' %}
+{% block content %}
+{% load static %}
+<section class="common-banner">
+    <div class="container">
+       <div class="row">
+          <div class="common-banner__content text-center">
+             <span class="sub-title"><i class="icon-donation"></i>URMILA FOUNDATION</span>
+             <h2 class="title-animation">Facilities</h2>
+          </div>
+       </div>
+    </div>
+    <div class="banner-bg">
+       <img src="{% static 'images/banner/banner-bg.png' %}" alt="Image">
+    </div>
+    <div class="shape">
+       <img src="{% static 'images/shape.png' %}" alt="Image">
+    </div>
+    <div class="sprade" data-aos="zoom-in" data-aos-duration="1000">
+       <img src="{% static 'images/sprade-base.png' %}" alt="Image" class="base-img">
+    </div>
+   </section>
+   <!-- ==== / banner section end ==== -->
+   <!-- ==== cause section start ==== -->
+   <section class="cause fc-cause pt-120 pb-120">
+            <div class="container">
+               <div class="row justify-content-center">
+                  <div class="col-12 col-md-8 col-xl-7 mb-4">
+                     <div class="section__header text-center">
+                        <span class="sub-title">We are always open for children</span>
+                        <h2 class="title-animation mt-0">Our Facilities
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+               <div class="row gutter-30 my-4">
+                  <div class="col-12 col-lg-6 col-xl-4">
+                     <div class="cause__slider-single">
+                        <div class="thumb">
+                              <img src="{% static 'images/cause/eight.png' %}" alt="Image">
+                        </div>
+                        <div class="content">
+                           <h6 class="fw-7">Education For All</h6>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 col-lg-6 col-xl-4">
+                     <div class="cause__slider-single">
+                        <div class="thumb">
+                              <img src="{% static 'images/cause/nine.png' %}" alt="Image">
+                        </div>
+                        <div class="content">
+                           <h6>Health and Care</h6>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 col-lg-6 col-xl-4">
+                     <div class="cause__slider-single">
+                        <div class="thumb">
+                              <img src="{% static 'images/cause/ten.png' %}" alt="Image">
+                        </div>
+                        <div class="content">
+                           <h6>A Familier Environment</h6>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row gutter-30 mt-4">
+                <div class="col-12 col-lg-6 col-xl-4">
+                   <div class="cause__slider-single">
+                      <div class="thumb">
+                            <img src="{% static 'images/cause/eight.png' %}" alt="Image">
+                      </div>
+                      <div class="content">
+                         <h6 class="fw-7">Moral Values & Teachings</h6>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-4">
+                   <div class="cause__slider-single">
+                      <div class="thumb">
+                            <img src="{% static 'images/cause/nine.png' %}" alt="Image">
+                      </div>
+                      <div class="content">
+                         <h6>Women Empowerment</h6>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-4">
+                   <div class="cause__slider-single">
+                      <div class="thumb">
+                            <img src="{% static 'images/cause/ten.png' %}" alt="Image">
+                      </div>
+                      <div class="content">
+                         <h6>Physical & Mental Growth</h6>
+                      </div>
+                   </div>
+                </div>
+             </div>
+            </div>
+            <div class="shape">
+               <img src="{% static 'images/shape-two.png' %}" alt="Image">
+            </div>
+         </section>
+         <!-- ==== / cause section end ==== -->
+          {% endblock %}

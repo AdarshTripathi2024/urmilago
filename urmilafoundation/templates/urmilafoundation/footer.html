@@ -1,0 +1,273 @@
+  <!-- ==== footer start ==== -->
+  <!-- {% load static %}  -->
+  <footer class="footer-two">
+    <div class="container">
+       <div class="row align-items-center gutter-30">
+          <div class="col-12 col-lg-7 col-xxl-6">
+             <div class="footer-two__newsletter-content">
+                <h3 class="title-animation">
+                   Subscribe to Our Newsletter
+                </h3>
+                <p>Subscribe Now for Regular info about our 
+                  Activities and Campaigns
+                </p>
+             </div>
+          </div>
+          <div class="col-12 col-lg-5 col-xxl-5 offset-xxl-1">
+             <div class="footer-two__newsletter-form">
+                <form id="subscription">
+                  {% csrf_token %}
+                   <input type="email" required name="email" id="email"
+                      placeholder="Enter Email">
+                   <button type="submit" aria-label="subscribe to our newsletter"
+                      title="subscribe to our newsletter" class="btn--primary"> <i
+                         class="fa-solid fa-paper-plane"></i>
+                   </button> 
+                </form>
+             </div>
+             <p id="emailerror" class="text-danger"></p>
+             <form id="otpForm" method="post" style="display: none; margin-top: 20px;">
+               {% csrf_token %}
+               <input type="hidden" id="otpEmail" name="email">
+               <label class="h6 text-white">Enter the OTP sent to your email:</label>
+               <input type="text" id="otpInput" name="otp"  class="p-2 mx-2 " required>
+               <button type="submit" class="btn--primary">Verify OTP</button>
+             </form>
+          </div>
+
+       </div>
+       <div class="row">
+          <div class="col-12">
+             <hr class="divider">
+          </div>
+       </div>
+       <div class="row gutter-60">
+          <div class="col-12 col-md-6 col-xl-3">
+             <div class="footer-two__widget" data-aos="fade-up" data-aos-duration="1000">
+                <div class="footer-two__widget-logo">
+                   <a href="{% url 'home' %}">
+                      <img src="{% static 'images/logo/footer-logo.png' %}" alt="Image">
+                   </a>
+                </div>
+                <div class="footer-two__widget-content">
+                   <p>Urmila Foundation – Breaking Barriers. We are committed to providing education, healthcare, and essential support to underprivileged communities, ensuring a better future for all.
+                   </p>
+                   <div class="social">
+                      <a href="https://www.facebook.com/" target="_blank" aria-label="share us on facebook"
+                         title="facebook">
+                         <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+                      <a href="" target="_blank" aria-label="Urmila Foundation Youtube Channel" title="Urmila Foundation Youtube Channel ">
+                         <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a href="https://x.com/" target="_blank" aria-label="share us on twitter" title="twitter">
+                         <i class="fa-brands fa-twitter"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/" target="_blank" aria-label="share us on linkedin"
+                         title="linkedin">
+                         <i class="fa-brands fa-linkedin-in"></i>
+                      </a>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-2 offset-xl-1">
+             <div class="footer-two__widget" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="footer-two__widget-intro">
+                   <h5>Quick Links</h5>
+                   <div class="line">
+                      <span class="large-line"></span>
+                      <span class="small-line"></span>
+                      <span class="small-line"></span>
+                   </div>
+                </div>
+                <div class="footer-two__widget-content">
+                   <ul>
+                     <li><a href="{% url 'home' %}"><i class="fa-solid fa-arrow-right"></i>Home</a></li>
+                      <li><a href="{% url 'about-us' %}"><i class="fa-solid fa-arrow-right"></i>About Us</a>
+                      </li>
+                      <li><a href="{% url 'photo-gallery' %}"><i class="fa-solid fa-arrow-right"></i>Photo Gallery</a>
+                      </li>
+                      <li><a href="{% url 'our-blogs' %}"><i class="fa-solid fa-arrow-right"></i>Our Blogs</a>
+                      </li>
+                      <li><a href="{% url 'our-team' %}"><i class="fa-solid fa-arrow-right"></i>Our Team</a>
+                      </li>
+                   </ul>
+                </div>
+             </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+             <div class="footer-two__widget footer-two__widget--alternate" data-aos="fade-up"
+                data-aos-duration="1000" data-aos-delay="400">
+                <div class="footer-two__widget-intro">
+                   <h5>Quick Links</h5>
+                   <div class="line">
+                      <span class="large-line"></span>
+                      <span class="small-line"></span>
+                      <span class="small-line"></span>
+                   </div>
+                </div>
+                <div class="footer-two__widget-content">
+                   <ul>
+                      <li><a href="{% url 'faqs' %}"><i class="fa-solid fa-arrow-right"></i>FaQs</a>
+                      </li>
+                      <li><a href="{% url 'join-us' %}"><i class="fa-solid fa-arrow-right"></i>Join Us</a>
+                      </li>
+                      <li><a href="{% url 'donate-us' %}"><i class="fa-solid fa-arrow-right"></i>Donate Us</a>
+                      </li>
+                      <li><a href="{% url 'contact-us' %}"><i class="fa-solid fa-arrow-right"></i>Contact Us</a>
+                      </li>
+                      <li><a href="{% url 'admin-dashboard' %}"><i class="fa-solid fa-arrow-right"></i>Admin Panel</a>
+                      </li>
+                   </ul>
+                </div>
+             </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+             <div class="footer-two__widget footer-two__widget--alternate" data-aos="fade-up"
+                data-aos-duration="1000" data-aos-delay="600">
+                <div class="footer-two__widget-intro">
+                   <h5>Get In Touch</h5>
+                   <div class="line">
+                      <span class="large-line"></span>
+                      <span class="small-line"></span>
+                      <span class="small-line"></span>
+                   </div>
+                </div>
+                <div class="footer-two__widget-content footer-two__widget-content--contact">
+                   <ul>
+                      <li><a style="text-transform:none;" href="https://maps.app.goo.gl/4LjpU4pysnZssCXz6" target="_blank"><i
+                               class="fa-solid fa-location-dot"></i>Near ISBT, Nahar Road, Bhatagaon, Raipur (C.G.)</a>
+                      </li>
+                      <li><a href="tel:2305-587-3407"><i class="fa-solid fa-phone"></i>+088 (246)
+                            642-27-10</a>
+                      </li>
+                      <li><a href="mailto:info@urmilafoundation.com"><i
+                               class="fa-regular fa-envelope"></i>info@urmilafoundation.com</a></li>
+                   </ul>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="footer-two__copyright">
+       <div class="container">
+          <div class="row align-items-center gutter-12">
+             <div class="col-12 col-lg-12">
+                <div class="footer-two__copyright-inner text-center text-lg-start">
+                  <p>Copyright &copy; <span id="copyrightYear"></span> <a href="{% url 'home' %}">Urmila Foundation</a>.
+                     All rights
+                     reserved. | Website Developed & Managed By <a href="https://nisharindia.in/">Nishar India</a> Or Call Us <a href="tel:+91 8839946717">+91 88399 46717</a>. 
+                   </p>
+                </div>
+             </div>
+             
+          </div>
+       </div>
+    </div>
+    <div class="sprade" data-aos="zoom-in" data-aos-duration="1000">
+       <img src="{% static 'images/sprade.png' %}" alt="Image" class="base-img">
+    </div>
+    <div class="sprade-light" data-aos="zoom-in" data-aos-duration="1000">
+       <img src="{% static 'images/sprade-light.png' %}" alt="Image">
+    </div>
+ </footer>
+ <!-- ==== / footer end ==== -->
+ <!-- ==== custom cursor start ==== -->
+ <div class="mouseCursor cursor-outer"></div>
+ <div class="mouseCursor cursor-inner"></div>
+ <!-- ==== / custom cursor end ==== -->
+ <!-- ==== scroll to top start ==== -->
+ <button class="progress-wrap" aria-label="scroll indicator" title="back to top">
+    <span></span>
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+ </button>
+ <!-- ==== / scroll to top end ==== -->
+
+</div>
+<!-- ==== js dependencies start ==== -->
+<!-- jquery -->
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+<!-- bootstrap five js -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<!-- nice select js -->
+<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+<!-- magnific popup js -->
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<!-- swiper slider js -->
+<script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+<!-- viewport js -->
+<script src="{% static 'js/viewport.jquery.js' %}"></script>
+<!-- odometer js -->
+<script src="{% static 'js/odometer.min.js' %}"></script>
+<!-- vanilla tilt js -->
+<script src="{% static 'js/vanilla-tilt.min.js' %}"></script>
+<!-- aos js -->
+<script src="{% static 'js/aos.js' %}"></script>
+<!-- splittext js -->
+<script src="{% static 'js/SplitText.min.js' %}"></script>
+<!-- scrollto js -->
+<script src="{% static 'js/ScrollToPlugin.min.js' %}"></script>
+<!-- scrolltrigger js -->
+<script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+<!-- gsap js -->
+<script src="{% static 'js/gsap.min.js' %}"></script>
+<!-- ==== / js dependencies end ==== -->
+<!-- template settings js -->
+<script src="{% static 'js/template-settings.js' %}"></script>
+<!-- main js -->
+<script src="{% static 'js/custom.js' %}"></script>
+<script>
+   $(document).ready(function(){
+ $('#subscription').on('submit', function(e){
+     e.preventDefault();
+     var formData = new FormData(this);
+     var csrftoken = getCSRFToken();
+     $.ajax({
+         url: "{% url 'subscribe' %}",
+         type: 'POST',
+         data: formData,
+         contentType: false,  // Prevent jQuery from processing the content type
+         processData: false, 
+         headers: { "X-CSRFToken": csrftoken },
+         success: function(response){
+           
+             if (response.status === "success") {
+                 $('#msg').html('<div class="alert alert-success my-4">Your Application sent successfully!</div>');
+                 $('#subscription')[0].reset();  // Reset the form on success
+                 console.log('Success');
+             } else {
+                 console.log('validation error');
+                 if (response.errors.email) {
+                     $('#emailerror').html(response.errors.email);
+                 }
+               
+             }
+         },
+         error: function(xhr, status, error){
+             // Handle error
+             console.log('error occured');
+             $('#subscription')[0].reset();  
+             $('#msg').html('<div class="alert alert-danger my-4">An error occurred: ' + error + '</div>');
+           
+         }
+     });
+ });
+ function getCSRFToken() {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            let cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].trim();
+                if (cookie.startsWith('csrftoken=')) {
+                    cookieValue = cookie.substring(10);
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+});
+</script>

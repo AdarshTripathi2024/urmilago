@@ -1,0 +1,182 @@
+ {% extends 'urmilafoundation/base.html' %}
+ {% block content %}
+ {% load static %}
+ <!-- ==== banner section start ==== -->
+  <section class="common-banner">
+    <div class="container">
+       <div class="row">
+          <div class="common-banner__content text-center">
+             <span class="sub-title"><i class="icon-donation"></i>Start donating poor people</span>
+             <h2 class="title-animation">Become A Volunteer</h2>
+          </div>
+       </div>
+    </div>
+    <div class="banner-bg">
+       <img src="{% static 'images/banner/banner-bg.png' %}" alt="Image">
+    </div>
+    <div class="shape">
+       <img src="{% static 'images/shape.png' %}" alt="Image">
+    </div>
+    <div class="sprade" data-aos="zoom-in" data-aos-duration="1000">
+       <img src="{% static 'images/sprade-base.png' %}" alt="Image" class="base-img">
+    </div>
+ </section>
+ <!-- ==== / banner section end ==== -->
+ <!-- ==== volunteer section start ==== -->
+ <section class="volunteer">
+    <div class="container">
+       <div class="row gutter-40">
+          <div class="col-12 col-xl-6">
+             <div class="volunteer__content">
+                <div class="section__content">
+                   <span class="sub-title"><i class="icon-donation"></i> Become A Volunteer</span>
+                   <h2 class="title-animation">Join Us</h2>
+                   <p>Volunteering with Urmila Foundation is a chance to create real change in the lives of those in need. Whether you’re passionate about education, healthcare, or community welfare, your time and effort can bring hope and happiness to countless people.
+                   </p>
+                </div>
+                <div class="warning">
+                   <div class="line"></div>
+                   <p><strong>Notice:</strong> Test mode is enabled. While in test mode no
+                      live
+                      donations are processed.
+                   </p>
+                </div>
+               
+                <div class="team-details__list">
+                   <ul>
+                      <li><i class="icon-circle-check"></i>Best Quality Services</li>
+                      <li><i class="icon-circle-check"></i>Time Saving</li>
+                      <li><i class="icon-circle-check"></i>Meet the Deadlines</li>
+                      <li><i class="icon-circle-check"></i>24/7 Customer Support</li>
+                   </ul>
+                </div>
+             </div>
+          </div>
+          <div class="col-12 col-xl-6">
+             <div class="volunteer__form checkout__form" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="100">
+                <div class="volunteer__form-content">
+                   <h4 class="title-animation">Fill Up The Form</h4>
+                  <p>fill this form to send request for the volunteership</p>
+                </div>
+                <form class="cta" id="join-form">
+                  {% csrf_token %}
+                   <div class="input-group">
+                      <div class="input-single">
+                         <input type="text" name="name" id="name" placeholder="Full Name" required>
+                         <i class="fa-solid fa-user"></i>
+                      </div>
+                      <span id="nameerror" class="text-danger"></span>
+                      <div class="input-single">
+                        <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                        <i class="fa-solid fa-envelope"></i>
+                     </div>
+                     <span id="emailerror" class="text-danger"></span>
+                   </div>
+                   
+                   <div class="input-group">
+                      <div class="input-single">
+                         <input type="text" name="phone" id="phone" placeholder="Phone Number"
+                            required>
+                         <i class="fa-solid fa-phone"></i>
+                      </div>
+                      <span id="phoneerror" class="text-danger"></span>
+                      <div class="input-single">
+                         <input type="text" name="occupation" id="occupation" placeholder="Occupation" required>
+                         <i class="fa-solid fa-user-tie"></i>
+                      </div>
+                      <span id="occupationerror" class="text-danger"></span>
+                   </div>
+                   <div class="input-single">
+                     <input type="text" name="address" id="address" placeholder="Enter Address" required>
+                     <i class="fa-solid fa-location"></i>
+                  </div>
+                  <span id="addresserror" class="text-danger"></span>
+                   <div class="input-single alter-input">
+                      <textarea name="message" id="message"
+                         placeholder="your message..."></textarea>
+                      <i class="fa-solid fa-comments"></i>
+                   </div>
+                   <span id="messageerror" class=" text-danger"></span>
+                   <div class="form-cta">
+                      <button type="submit" aria-label="submit message" title="submit message"
+                         class="btn--primary">Submit Now <i class="fa-solid fa-arrow-right"></i></button>
+                   </div>
+                </form>
+                <div id="msg"></div>
+             </div>
+            
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- ==== / volunteer section end ==== -->
+ <script>
+   $(document).ready(function(){
+ $('#join-form').on('submit', function(e){
+     e.preventDefault();
+     var formData = new FormData(this);
+     var csrftoken = getCSRFToken();
+     $.ajax({
+         url: "{% url 'join-us' %}",
+         type: 'POST',
+         data: formData,
+         contentType: false,  // Prevent jQuery from processing the content type
+         processData: false, 
+         headers: { "X-CSRFToken": csrftoken },
+         success: function(response){
+           
+             if (response.status === "success") {
+                 $('#msg').html('<div class="alert alert-success my-4">Your Application sent successfully!</div>');
+                 $('#join-form')[0].reset();  // Reset the form on success
+                 console.log('Success');
+             } else {
+                 // Display validation errors
+                 console.log('validation error');
+                 if (response.errors.name) {
+                     $('#nameerror').html(response.errors.name);
+                 }
+                 if (response.errors.email) {
+                     $('#emailerror').html(response.errors.email);
+                 }
+                 if (response.errors.phone) {
+                     $('#phoneerror').html(response.errors.phone);
+                 }
+                 if (response.errors.message) {
+                     $('#messageerror').html(response.errors.message);
+                 }
+                 if (response.errors.occupation) {
+                     $('#occupationerror').html(response.errors.occupation);
+                 }
+                 if (response.errors.address) {
+                     $('#addresserror').html(response.errors.address);
+                 }
+             }
+         },
+         error: function(xhr, status, error){
+             // Handle error
+             console.log('error occured');
+             $('#join-form')[0].reset();  
+             $('#msg').html('<div class="alert alert-danger my-4">An error occurred: ' + error + '</div>');
+           
+         }
+     });
+ });
+ function getCSRFToken() {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            let cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].trim();
+                if (cookie.startsWith('csrftoken=')) {
+                    cookieValue = cookie.substring(10);
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+});
+</script>
+  {% endblock %}
+  

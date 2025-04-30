@@ -1,0 +1,55 @@
+{% extends 'urmilafoundation/base.html' %}
+{% block content %}
+{% load static %}
+<!-- ==== banner section start ==== -->
+<section class="common-banner">
+    <div class="container">
+       <div class="row">
+          <div class="common-banner__content text-center">
+             <span class="sub-title"><i class="icon-donation"></i>Start donating poor people</span>
+             <h2 class="title-animation">Blog</h2>
+          </div>
+       </div>
+    </div>
+    <div class="banner-bg">
+       <img src="{% static 'images/banner/banner-bg.png' %}" alt="Image">
+    </div>
+    <div class="shape">
+       <img src="{% static 'images/shape.png' %}" alt="Image">
+    </div>
+    <div class="sprade" data-aos="zoom-in" data-aos-duration="1000">
+       <img src="{% static 'images/sprade-base.png' %}" alt="Image" class="base-img">
+    </div>
+ </section>
+ <!-- ==== / banner section end ==== -->
+<!-- ==== cause details section start ==== -->
+<div class="cm-details">
+    <div class="container">
+       <div class="row gutter-60">
+          <div class="col-12 col-xl-8 offset-xl-2">
+             <div class="cm-details__content">
+                <div class="cm-details__poster">
+                   <img src="{{ blog.image.url }}  " alt="Image">
+                </div>
+                <div class="cm-details-meta">
+                   <p><i class="fa-solid fa-calendar-days"></i>{{blog.submitted_at}}</p>
+                   <p><i class="fa-solid fa-location-dot"></i> Raipur Chhattisgarh</p>
+                </div>
+                <div class="cm-group cta">
+                   <h3 class="title-animation text-center">{{ blog.title }}</h3>
+                   <p>{{ blog.first }}</p>
+                </div>
+                <div class="cm-group cta">
+                   <h5 class="title-animation text-dark">Summary</h5>
+                   <p>{{ blog.second }}</p>
+                </div>
+                <div class="cm-group cta">
+                    <p>{{ blog.conclusion }}</p>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- ==== / cause details section end ==== -->
+{% endblock %}

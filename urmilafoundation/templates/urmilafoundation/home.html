@@ -1,0 +1,1105 @@
+{% extends 'urmilafoundation/base.html' %}
+{% block content %}
+{% load static %}
+<section class="banner-two">
+         <div class="banner-two__slider swiper">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                  <div class="banner-two__slider-single">
+                     <div class="banner-two__slider-bg" data-background="{% static 'images/banner/banner-two-bg.png' %}">
+                     </div>
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-12 col-md-9 col-lg-9 col-xxl-6">
+                              <div class="banner-two__slider-content">
+                                 <span class="sub-title"><i class="icon-donation"></i>Start donating poor
+                                    people</span>
+                                 <h1>Urmila foundation<br>
+                                    <span class="bottom-line h6">breaking the barrieres</span>
+                                 </h1>
+                                 <div class="banner__content-cta cta">
+                                    <a href="{% url 'about-us' %}" aria-label="about us" title="about us"
+                                       class="btn--tertiary">Know more about Us <i class="fa-solid fa-arrow-right"></i></a>
+                                    <a href="{% url 'donate-us' %}" aria-label="donate us" title="donate us"
+                                       class="btn--primary">Donate Us <i class="fa-solid fa-arrow-right"></i></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-slide">
+                  <div class="banner-two__slider-single">
+                     <div class="banner-two__slider-bg" data-background="{% static 'images/banner/banner-one-bg.png' %}">
+                     </div>
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-12 col-md-9  col-lg-9 col-xxl-6">
+                              <div class="banner-two__slider-content">
+                                 <span class="sub-title"><i class="icon-donation"></i>Start donating poor
+                                    people</span>
+                                    <h1>Urmila foundation<br>
+                                       <span class="bottom-line h6">breaking the barrieres</span>
+                                    </h1>
+                                 <div class="banner__content-cta cta">
+                                    <a href="{% url 'about-us' %}" aria-label="about us" title="about us"
+                                       class="btn--tertiary">Know More About Us <i class="fa-solid fa-arrow-right"></i></a>
+                                    <a href="{% url 'donate-us' %}" aria-label="contact us" title="contact us"
+                                       class="btn--primary">Donate Us<i class="fa-solid fa-arrow-right"></i></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-slide">
+                  <div class="banner-two__slider-single">
+                     <div class="banner-two__slider-bg" data-background="{% static 'images/banner/banner-two-bg.png' %}">
+                     </div>
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-12 col-md-9 col-lg-9 col-xxl-6">
+                              <div class="banner-two__slider-content">
+                                 <span class="sub-title"><i class="icon-donation"></i>Start donating poor
+                                    people</span>
+                                    <h1>Urmila foundation<br>
+                                    <span class="bottom-line">breaking the barrieres</span>
+                                 </h1>
+                                 <div class="banner__content-cta cta">
+                                    <a href="{% url 'about-us' %}" aria-label="about us" title="about us"
+                                       class="btn--tertiary">Know More About Us <i class="fa-solid fa-arrow-right"></i></a>
+                                    <a href="{% url 'donate-us' %}" aria-label="contact us" title="contact us"
+                                       class="btn--primary">Donate Us<i class="fa-solid fa-arrow-right"></i></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-slide">
+                  <div class="banner-two__slider-single">
+                     <div class="banner-two__slider-bg" data-background="{% static 'images/banner/banner-one-bg.png' %}">
+                     </div>
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-12 col-md-9 col-lg-9 col-xxl-6">
+                              <div class="banner-two__slider-content">
+                                 <span class="sub-title"><i class="icon-donation"></i>Start donating poor
+                                    people</span>
+                                    <h1>Urmila foundation<br>
+                                    <span class="bottom-line h6">breaking the barrieres</span>
+                                 </h1>
+                                 <div class="banner__content-cta cta">
+                                    <a href="{% url 'about-us' %}" aria-label="about us" title="about us"
+                                       class="btn--tertiary">Know More About Us<i class="fa-solid fa-arrow-right"></i></a>
+                                    <a href="{% url 'donate-us' %}" aria-label="contact us" title="contact us"
+                                       class="btn--primary">Donate Us<i class="fa-solid fa-arrow-right"></i></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="slider-navigation d-none d-md-flex">
+            <button type="button" aria-label="prev slide" title="prev slide" class="prev-banner slider-btn">
+               <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button type="button" aria-label="next slide" title="next slide"
+               class="next-banner slider-btn slider-btn-next">
+               <i class="fa-solid fa-arrow-right"></i>
+            </button>
+         </div>
+         <div class="shape">
+            <img src="{% static 'images/shape.png' %}" alt="Image">
+         </div>
+         <div class="shape-left" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+            <img src="{% static 'images/banner/banner-two-shape.png' %}" alt="Image">
+         </div>
+         <div class="sprade-shape">
+            <img src="{% static 'images/sprade-base.png' %}" alt="Image" class="base-img" data-aos="zoom-in"
+               data-aos-duration="1000">
+         </div>
+         <div class="unity">
+            <img src="{% static 'images/unity.png' %}" alt="Image">
+         </div>
+      </section>
+      <!-- ==== / banner section end ==== -->
+      <!-- ==== partner section start ==== -->
+      <div class="partner">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="partner__slider swiper">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                           <div class="partner__slider-single">
+                              <img src="{% static 'images/sponsor/one.png' %}" alt="Image">
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="partner__slider-single">
+                              <img src="{% static 'images/sponsor/two.png' %}" alt="Image">
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="partner__slider-single">
+                              <img src="{% static 'images/sponsor/three.png' %}" alt="Image">
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="partner__slider-single">
+                              <img src="{% static 'images/sponsor/four.png' %}" alt="Image">
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="partner__slider-single">
+                              <img src="{% static 'images/sponsor/five.png' %}" alt="Image">
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="partner__slider-single">
+                              <img src="{% static 'images/sponsor/one.png' %}" alt="Image">
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="partner__slider-single">
+                              <img src="{% static 'images/sponsor/two.png' %}" alt="Image">
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="partner__slider-single">
+                              <img src="{% static 'images/sponsor/three.png' %}" alt="Image">
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="partner__slider-single">
+                              <img src="{% static 'images/sponsor/four.png' %}" alt="Image">
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="partner__slider-single">
+                              <img src="{% static 'images/sponsor/five.png' %}" alt="Image">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+        <!-- ==== difference two section start ==== -->
+        <section class="difference-two">
+         <div class="container">
+            <div class="row gutter-40 align-items-center">
+               <div class="col-12 col-lg-4 col-xxl-5 d-none d-lg-block">
+                  <div class="difference-two__thumb-wrapper">
+                     <div class="difference-two__thumb">
+                        <div class="thumb-lg" data-aos="fade-right" data-aos-duration="1000">
+                           <img src="{% static 'images/difference/thumb-sm.png' %}" alt="Image">
+                           <div class="grid-line">
+                              <img src="{% static 'images/help/grid.png' %}" alt="Image" class="base-img">
+                           </div>
+                        </div>
+                        <div class="thumb-sm" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                           <img src="{% static 'images/difference/thumb-lg.png' %}" alt="Image">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-8 col-xxl-7">
+                  <div class="difference-two__content" data-aos="fade-up" data-aos-duration="1000">
+                     <span class="sub-title"><i class="icon-donation"></i>Start donating poor
+                        people</span>
+                     <h2 class="title-animation">About <span>Urmila Foundation</span></h2>
+                     <p>Urmila Foundation is a charitable trust established with the vision of building a healthier, more equitable, and sustainable future for all. Backed by one of the region’s most respected hospitals, our foundation is deeply rooted in compassion and a strong sense of social responsibility.
+                     </p>
+                     <p>At Urmila Foundation, we strive to be a beacon of hope and a bridge to a better life. Guided by empathy and driven by action, we continue to touch lives and transform communities—one step at a time.</p>
+                     <div class="difference-two__inner cta">
+                        <div class="difference-two__inner-content">
+                           <div class="difference-two__tab">
+                              <div class="difference-two__tab-btns">
+                                 <button class="difference-two__tab-btn active" data-target="#mission"
+                                    aria-label="mission" title="mission">Our Mission</button>
+                                 <button class="difference-two__tab-btn" data-target="#vision" aria-label="vision"
+                                    title="vision">Our Vision</button>
+                                 <button class="difference-two__tab-btn" data-target="#excellence"
+                                    aria-label="excellence" title="excellence">Excellence</button>
+                              </div>
+                              <div class="difference-two__tab-content">
+                                 <div class="difference-two__content-single" id="mission">
+                                    <p>Our mission is to uplift communities through initiatives focused on healthcare, child education, women empowerment, poverty alleviation, and environmental conservation.</p>
+                                    <p> We strieve to:</p>
+                                    <br>
+                                    <ul>
+                                       <li><i class="fa-solid fa-check"></i> Offer medical services to those who cannot afford them.
+                                       </li>
+                                       <li><i class="fa-solid fa-check"></i>Run food & Nutrition programs to fight hunger & malnutrition.
+                                       </li>
+                                       <li><i class="fa-solid fa-check"></i> Promote women empowerment and skill development.</li>
+                                    </ul>
+                                 </div>
+                                 <div class="difference-two__content-single" id="vision">
+                                    <p>We envision a world where every child has access to education, every individual receives medical care, and every community thrives with dignity and opportunity. Our efforts are directed toward creating long-term change by building self-sustaining communities.</p>
+                                    <br>
+                                 </div>
+                                 <div class="difference-two__content-single" id="excellence">
+                                    <ul>
+                                       <li><i class="fa-solid fa-check"></i> 100+ free medical treatments provided.
+                                       </li>
+                                       <li><i class="fa-solid fa-check"></i>50+ women empowered through skill development.
+                                       </li>
+                                       <li><i class="fa-solid fa-check"></i>200+ children educated through our programs.</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="difference-two__progress">
+                              <div class="difference-progress-single">
+                                 <div class="progress-bar-single" data-percent="75%">
+                                    <div class="circular-progress">
+                                       <div class="percent-value">0</div>
+                                       <svg class="progress-circle" viewBox="0 0 36 36">
+                                          <path class="circle-bg" d="M18 2.0845
+                                                a 15.9155 15.9155 0 0 1 0 31.831
+                                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                          <path class="circle-progress" d="M18 2.0845
+                                                a 15.9155 15.9155 0 0 1 0 31.831
+                                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                       </svg>
+                                    </div>
+                                 </div>
+                                 <div class="content">
+                                    <p>Projects <br>
+                                       Completed
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="difference-progress-single">
+                                 <div class="progress-bar-single" data-percent="92%">
+                                    <div class="circular-progress">
+                                       <div class="percent-value">0</div>
+                                       <svg class="progress-circle" viewBox="0 0 36 36">
+                                          <path class="circle-bg" d="M18 2.0845
+                                                a 15.9155 15.9155 0 0 1 0 31.831
+                                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                          <path class="circle-progress" d="M18 2.0845
+                                                a 15.9155 15.9155 0 0 1 0 31.831
+                                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                       </svg>
+                                    </div>
+                                 </div>
+                                 <div class="content">
+                                    <p>Outreach<br> Success</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="spade">
+            <img src="{% static 'images/spade-green-two.png' %}" alt="Image">
+         </div>
+      </section>
+      <!-- ==== / difference two section end ==== -->
+      <section class="difference">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-12 col-lg-10 col-xl-8">
+                  <div class="section__header text-center" data-aos="fade-up" data-aos-duration="1000">
+                     <span class="sub-title"><i class="icon-donation"></i>Start donating poor
+                        people</span>
+                     <h2 class="title-animation">Our Field of Services</h2>
+                     <p>At Urmila Foundation, our work spans across critical areas that lay the foundation for a stronger, healthier, and more compassionate society. Each of our service fields is guided by real need, deep empathy, and a commitment to sustainable impact.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="difference__inner">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12">
+                     <div class="difference__slider swiper">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <div class="difference__single-wrapper">
+                                 <div class="difference__single difference__single-second"
+                                    data-background="{% static 'images/difference/bg-two.png' %}">
+                                    <div class="difference__single-thumb">
+                                       <i class="icon-food"></i>
+                                    </div>
+                                    <div class="difference__single-content">
+                                    <h5>poverty Alleviation</h5>
+                                    <p>We work with marginalized families to create pathways out of poverty through livelihood training, essential aid, and long-term community support.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="difference__single-wrapper">
+                                 <div class="difference__single difference__single-third "
+                                    data-background="{% static 'images/difference/bg-three.png' %}">
+                                    <div class="difference__single-thumb">
+                                       <i class="icon-health"></i>
+                                    </div>
+                                    <div class="difference__single-content">
+                                    <h5>Medical Care</h5>
+                                    <p>Contribute to our Campaign to ensure access to essential medical treatments, medicines, and healthcare services for those in need, saving lives every day.</p>    
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="difference__single-wrapper">
+                                 <div class="difference__single difference__single-first"
+                                    data-background="{% static 'images/difference/bg-one.png' %}">
+                                    <div class="difference__single-thumb">
+                                       <i class="icon-education"></i>
+                                    </div>
+                                    <div class="difference__single-content">
+                                    <h5>Child Education</h5>
+                                    <p>We support a child's future by contributing to his/her education programs, providing books, school supplies, and scholarships for underprivileged children.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="difference__single-wrapper">
+                                 <div class="difference__single difference__single-second"
+                                    data-background="{% static 'images/difference/bg-two.png' %}">
+                                    <div class="difference__single-thumb">
+                                       <i class="icon-food"></i>
+                                    </div>
+                                    <div class="difference__single-content">
+                                    <h5>Healthy Food</h5>
+                                    <p>Help us provide nutritious meals to children and families in need and passing their life on roads as beggars, ensuring no one goes to bed hungry.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="difference__single-wrapper">
+                                 <div class="difference__single difference__single-second"
+                                    data-background="{% static 'images/difference/bg-two.png' %}">
+                                    <div class="difference__single-thumb">
+                                       <i class="icon-food"></i>
+                                    </div>
+                                    <div class="difference__single-content">
+                                    <h5>Nature Conservation</h5>
+                                    <p>Our environmental programs focus on tree plantation, waste reduction, and sustainability awareness, fostering a cleaner and greener tomorrow.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="difference__single-wrapper">
+                                 <div class="difference__single difference__single-third "
+                                    data-background="{% static 'images/difference/bg-three.png' %}">
+                                    <div class="difference__single-thumb">
+                                       <i class="icon-health"></i>
+                                    </div>
+                                    <div class="difference__single-content">
+                                       <h5>Women Empowerment</h5>
+                                       <p>From skill development programs to health awareness, we empower women to become confident contributors and leaders in their communities.</p>    
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="slider-navigation">
+               <button type="button" aria-label="prev slide" title="prev slide" class="prev-difference slider-btn">
+                  <i class="fa-solid fa-arrow-left"></i>
+               </button>
+               <button type="button" aria-label="next slide" title="next slide"
+                  class="next-difference slider-btn slider-btn-next">
+                  <i class="fa-solid fa-arrow-right"></i>
+               </button>
+            </div>
+         </div>
+         <div class="shape-hand" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+            <img src="{% static 'images/difference/shape-hand.png' %}" alt="Image">
+         </div>
+      </section>
+      <!-- ==== / difference section end ==== -->
+      <!-- ==== help section start ==== -->
+      <section class="help">
+         <div class="container">
+            <div class="row align-items-center gutter-40">
+               <div class="col-12 col-lg-5 col-xxl-6 d-none d-lg-block">
+                  <div class="help__thumb">
+                     <div class="help__thumb-inner">
+                        <div class="thumb-top thumb">
+                           <img src="{% static 'images/help/thumb-top.png' %}" alt="Image">
+                        </div>
+                        <div class="thumb-lg thumb" data-aos="fade-left" data-aos-duration="1000">
+                           <img src="{% static 'images/help/thumb-lg.png' %}" alt="Image">
+                           <div class="video-btn-wrapper">
+                              <a href="#" target="_blank" title="video Player"
+                                 class="open-video-popup">
+                                 <i class="icon-play"></i>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="thumb thumb-bottom">
+                           <img src="{% static 'images/help/thumb-bottom.png' %}" alt="Image">
+                        </div>
+                        <div class="line">
+                           <img src="{% static 'images/help/line.png' %}" alt="Image">
+                        </div>
+                        <div class="grid-line">
+                           <img src="{% static 'images/help/grid.png' %}" alt="Image" class="base-img">
+                        </div>
+                        <div class="vertical-text">
+                           <h5>We Give <span>Donations</span> to Poor People </h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-7 col-xxl-6">
+                  <div class="help__content">
+                     <span class="sub-title"><i class="icon-donation"></i>Start donating poor
+                        people</span>
+                     <h2 class="title-animation">Helping each other can
+                        make <span>world</span> better
+                     </h2>
+                     <p>Volunteering offers opportunities to develop new skills and gain valuable
+                        experience. This can include leadership, communication, project management, and teamwork
+                        skills.
+                     </p>
+                     <div class="help__content-icon-group">
+                        <div class="help__content-icon">
+                           <div class="thumb">
+                              <i class="icon-make-donation"></i>
+                           </div>
+                           <div class="content">
+                              <h6>Start helping them</h6>
+                              <p>Raising awareness about the charity's mission and cause.</p>
+                           </div>
+                        </div>
+                        <div class="help__content-icon">
+                           <div class="thumb">
+                              <i class="icon-support-heart"></i>
+                           </div>
+                           <div class="content">
+                              <h6>Make Donations</h6>
+                              <p>Encouraging people to donate for our charity campaigns</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="help__content-list">
+                        <ul>
+                           <li><i class="fa-solid fa-circle-check"></i>
+                            Supported many projects, empowering communities & helping those in need.
+                           </li>
+                           <li><i class="fa-solid fa-circle-check"></i> We provide children with the gift of education and a brighter future.
+                           </li>
+                           <li><i class="fa-solid fa-circle-check"></i>We help companies that drive social change and uplift communities.
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="help__content-cta cta">
+                        <a href="{% url 'join-us' %}" aria-label="become-a-volunteer" title="about us" class="btn--primary">Become a Volunteer</a>
+                        <div class="contact-btn">
+                           <div class="contact-icon">
+                              <i class="icon-phone"></i>
+                           </div>
+                           <div class="contact-content">
+                              <p>Phone</p>
+                              <a href="tel:01-793-7938">+236 (456) 896 22</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="hand">
+            <img src="{% static 'images/help/hand.png' %}" alt="Image">
+         </div>
+         <div class="parasuit">
+            <img src="{% static 'images/parasuit.png' %}" alt="Image">
+         </div>
+         <div class="spade">
+            <img src="{% static 'images/help/spade.png' %}" alt="Image">
+         </div>
+      </section>
+      <section class="team">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-12 col-lg-10 col-xl-6">
+                  <div class="section__header text-center" data-aos="fade-up" data-aos-duration="1000">
+                     <span class="sub-title"><i class="icon-donation"></i>Start donating poor
+                        people</span>
+                     <h2 class="title-animation">Meet Our Volunteer
+                        <span>Team</span> members
+                     </h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row gutter-40">
+               <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="team__single-wrapper" data-aos="fade-up" data-aos-duration="1000">
+                     <div class="team__single van-tilt">
+                        <div class="team__single-thumb">
+                              <img src="{% static 'images/team/team.png' %}" alt="Image">
+                           <div class="team__icons">
+                              <div class="team__single-content__icon">
+                                 <i class="fa-solid fa-plus"></i>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="team__single-content">
+                           <h6>Ravi Kumar</a></h6>
+                           <p>Volunteer</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="team__single-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                     <div class="team__single van-tilt">
+                        <div class="team__single-thumb">
+                              <img src="{% static 'images/team/team.png' %}" alt="Image">
+                           <div class="team__icons">
+                              <div class="team__single-content__icon">
+                                 <i class="fa-solid fa-plus"></i>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="team__single-content">
+                           <h6>Abhikant Das</a></h6>
+                           <p>Volunteer</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="team__single-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                     <div class="team__single van-tilt">
+                        <div class="team__single-thumb">
+                              <img src="{% static 'images/team/team.png' %}" alt="Image">
+                           <div class="team__icons">
+                              <div class="team__single-content__icon">
+                                 <i class="fa-solid fa-plus"></i>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="team__single-content">
+                           <h6>Jiya Khan</a></h6>
+                           <p>Volunteer</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="team__single-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
+                     <div class="team__single van-tilt">
+                        <div class="team__single-thumb">
+                              <img src="{% static 'images/team/team.png' %}" alt="Image">
+                           <div class="team__icons">
+                              <div class="team__single-content__icon">
+                                 <i class="fa-solid fa-plus"></i>
+                              </div>
+                           
+                           </div>
+                        </div>
+                        <div class="team__single-content">
+                           <h6>Adil Markram</h6>
+                           <p>Volunteer</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-12">
+                  <div class="section__cta cta text-center">
+                     <a href="{% url 'our-team' %}" aria-label="our team" title="our team" class="btn--primary">View All
+                        <i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="spade">
+            <img src="{% static 'images/sprade-green.png' %}" alt="Image">
+         </div>
+      </section>
+      <!-- ==== / team section end ==== -->
+      <!-- ==== community section start ==== -->
+      <section class="community">
+         <div class="container">
+            <div class="row">
+               <div class="col-12 col-md-8 col-xl-7">
+                  <div class="section__header" data-aos="fade-up" data-aos-duration="1000">
+                     <span class="sub-title"><i class="icon-donation"></i>Start donating poor
+                        people</span>
+                     <h2 class="title-animation">Join The <span>Community</span> To Give
+                        Education For Children
+                     </h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-12">
+               </div>
+            </div>
+         </div>
+         <div class="community-bg">
+            <img src="{% static 'images/community/community-bg.png' %}" alt="Image" class="parallax-image">
+         </div>
+      
+         <div class="spade">
+            <img src="{% static 'images/community/spade.png' %}" alt="Image" class="base-img">
+         </div>
+      </section>
+      <!-- ==== / community section end ==== -->
+      <!-- ==== testimonial section start ==== -->
+      <section class="testimonial" data-background="{% static 'images/bg-one.png' %}">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-12 col-md-8 col-xl-7">
+                  <div class="section__header text-center" data-aos="fade-up" data-aos-duration="1000">
+                     <span class="sub-title"><i class="icon-donation"></i>Start donating poor
+                        people</span>
+                     <h2 class="title-animation">What People <span> Say About</span>
+                        Us
+                     </h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="testimonial__inner">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12">
+                     <div class="testimonial__slider swiper">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <div class="testimonial__slider-single">
+                                 <div class="review">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                 </div>
+                                 <div class="content">
+                                    <blockquote><q>Urmila Foundation gave my child the opportunity to go to school for the first time. Their support changed our future and gave us hope</q>
+                                    </blockquote>
+                                 </div>
+                                 <div class="author-info">
+                                    <div class="author-thumb">
+                                       <img src="{% static 'images/author.png' %}" alt="Image">
+                                    </div>
+                                    <div class="author-content">
+                                       <h6>Rekha Devi</h6>
+                                       <p>Beneficiary</p>
+                                    </div>
+                                 </div>
+                                 <div class="quote">
+                                    <img src="{% static 'images/quote.png' %}" alt="Image">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="testimonial__slider-single">
+                                 <div class="review">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                 </div>
+                                 <div class="content">
+                                    <blockquote><q>Thanks to the free medical camp, my father received timely treatment that we couldn’t have afforded otherwise. The foundation is a true blessing.</q>
+                                    </blockquote>
+                                 </div>
+                                 <div class="author-info">
+                                    <div class="author-thumb">
+                                       <img src="{% static 'images/author.png' %}" alt="Image">
+                                    </div>
+                                    <div class="author-content">
+                                       <h6> Ravi Kumar</h6>
+                                       <p>Community Member</p>
+                                    </div>
+                                 </div>
+                                 <div class="quote">
+                                    <img src="{% static 'images/quote.png' %}" alt="Image">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="testimonial__slider-single">
+                                 <div class="review">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                 </div>
+                                 <div class="content">
+                                    <blockquote><q>The women's training program helped me learn tailoring. Today, I earn enough to support my family with dignity. I’ll forever be grateful.</q>
+                                    </blockquote>
+                                 </div>
+                                 <div class="author-info">
+                                    <div class="author-thumb">
+                                       <img src="{% static 'images/author.png' %}" alt="Image">
+                                    </div>
+                                    <div class="author-content">
+                                       <h6>Sangeeta</h6>
+                                       <p>Women Empowerment Program</p>
+                                    </div>
+                                 </div>
+                                 <div class="quote">
+                                    <img src="{% static 'images/quote.png' %}" alt="Image">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="testimonial__slider-single">
+                                 <div class="review">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                 </div>
+                                 <div class="content">
+                                    <blockquote><q>Their environmental drive and tree plantation program inspired our whole village to plant trees and care for nature. Real change starts when people come together.</q>
+                                    </blockquote>
+                                 </div>
+                                 <div class="author-info">
+                                    <div class="author-thumb">
+                                       <img src="{% static 'images/author.png' %}" alt="Image">
+                                    </div>
+                                    <div class="author-content">
+                                       <h6>Nitesh</h6>
+                                       <p>Volunteer</p>
+                                    </div>
+                                 </div>
+                                 <div class="quote">
+                                    <img src="{% static 'images/quote.png' %}" alt="Image">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="testimonial__slider-single">
+                                 <div class="review">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                 </div>
+                                 <div class="content">
+                                    <blockquote><q>Before Urmila Foundation, we struggled daily. Now, with the support and training they offered, we’ve started a small business of our own</q>
+                                    </blockquote>
+                                 </div>
+                                 <div class="author-info">
+                                    <div class="author-thumb">
+                                       <img src="{% static 'images/author.png' %}" alt="Image">
+                                    </div>
+                                    <div class="author-content">
+                                       <h6>Mahesh</h6>
+                                       <p>Beneficiary</p>
+                                    </div>
+                                 </div>
+                                 <div class="quote">
+                                    <img src="{% static 'images/quote.png' %}" alt="Image">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="testimonial__slider-single">
+                                 <div class="review">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                 </div>
+                                 <div class="content">
+                                    <blockquote><q>Charity is the voluntary act of giving help, typically in
+                                          the form of money, time, or resources, to those in need.
+                                          Urmila foundation is the best organizations </q>
+                                    </blockquote>
+                                 </div>
+                                 <div class="author-info">
+                                    <div class="author-thumb">
+                                       <img src="{% static 'images/author.png' %}" alt="Image">
+                                    </div>
+                                    <div class="author-content">
+                                       <h6>Bishu Kiev</h6>
+                                       <p>Donar, Business Man</p>
+                                    </div>
+                                 </div>
+                                 <div class="quote">
+                                    <img src="{% static 'images/quote.png' %}" alt="Image">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="slider-navigation">
+               <button type="button" aria-label="prev slide" title="prev slide" class="prev-testimonial slider-btn">
+                  <i class="fa-solid fa-arrow-left"></i>
+               </button>
+               <button type="button" aria-label="next slide" title="next slide"
+                  class="next-testimonial slider-btn slider-btn-next">
+                  <i class="fa-solid fa-arrow-right"></i>
+               </button>
+            </div>
+         </div>
+         <div class="shape" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+            <img src="{% static 'images/community/shape.png' %}" alt="Image" class="base-img">
+         </div>
+      </section>
+      <!-- ==== / testimonial section end ==== -->
+      <!-- ==== cause slider two section start ==== -->
+      <section class="cause-two">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-12">
+                  <div class="cause-two__inner">
+                     <div class="slider-navigation">
+                        <button type="button" aria-label="prev slide" title="prev slide"
+                           class="prev-cause-two slider-btn">
+                           <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button type="button" aria-label="next slide" title="next slide"
+                           class="next-cause-two slider-btn slider-btn-next">
+                           <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                     </div>
+                     <div class="cause-two__slider swiper">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <div class="cause-two__slider-single">
+                                 <div class="cause-thumb">
+                                    <img src="{% static 'images/cause/five.png' %}" alt="Image">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="cause-two__slider-single">
+                                 <div class="cause-thumb">
+                                    <img src="{% static 'images/cause/six.png' %}" alt="Image">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="cause-two__slider-single">
+                                 <div class="cause-thumb">
+                                    <img src="{% static 'images/cause/seven.png' %}" alt="Image">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="cause-two__slider-single">
+                                 <div class="cause-thumb">
+                                    <img src="{% static 'images/cause/five.png' %}" alt="Image">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="cause-two__slider-single">
+                                 <div class="cause-thumb">
+                                    <img src="{% static 'images/cause/six.png' %}" alt="Image">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="cause-two__slider-single">
+                                 <div class="cause-thumb">
+                                    <img src="{% static 'images/cause/seven.png' %}" alt="Image">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="cause-two__content-slider swiper">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                           <div class="cause-content">
+                              <h4>old people & Child trouble</h4>
+                              <p>Child & old care</p>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="cause-content">
+                              <h4>old people & Child trouble</h4>
+                              <p>Child & old care</p>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="cause-content">
+                              <h4>old people & Child trouble</h4>
+                              <p>Child & old care</p>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="cause-content">
+                              <h4>old people & Child trouble</h4>
+                              <p>Child & old care</p>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="cause-content">
+                              <h4>old people & Child trouble</h4>
+                              <p>Child & old care</p>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="cause-content">
+                              <h4>old people & Child trouble</h4>
+                              <p>Child & old care</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- ==== blog section start ==== -->
+      <section class="blog">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-12 col-md-8 col-xl-7">
+                  <div class="section__header text-center" data-aos="fade-up" data-aos-duration="1000">
+                     <span class="sub-title"><i class="icon-donation"></i>Start donating poor
+                        people</span>
+                     <h2 class="title-animation">Our Latest <span>Blog</span> &
+                     <span>Activities</span>
+                     </h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row gutter-40">
+               <div class="col-12 col-lg-6 col-xl-4">
+                  <div class="blog__single-wrapper" data-aos="fade-up" data-aos-duration="1000">
+                     <div class="blog__single van-tilt">
+                        <div class="blog__single-thumb"> 
+                              <img src="{% static 'images/blog/one.png' %}" alt="Image">
+                          </div>
+                        <div class="blog__single-inner">
+                           <div class="blog__single-content">
+                              <h5>IT Service Case Studies Accelerate
+                                    Business Fly Success Tech</a>
+                              </h5>
+                           </div>
+                           <div class="blog__single-cta">
+                              <a href="" aria-label="blog details" title="blog details">Read
+                                 More<i class="fa-solid fa-circle-arrow-right"></i></a>
+                           </div>
+                        </div>
+                        <img src="{% static 'images/blog/spade.png' %}" alt="Image" class="spade-two">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-6 col-xl-4">
+                  <div class="blog__single-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                     <div class="blog__single van-tilt">
+                        <div class="blog__single-thumb">
+                              <img src="{% static 'images/blog/two.png' %}" alt="Image">
+                        </div>
+                        <div class="blog__single-inner">
+                           <div class="blog__single-content">
+                              <h5><a href="">IT Service Case Studies Accelerate
+                                    Business Fly Success Tech</a>
+                              </h5>
+                           </div>
+                           <div class="blog__single-cta">
+                              <a href="" aria-label="blog details" title="blog details">Read
+                                 More<i class="fa-solid fa-circle-arrow-right"></i></a>
+                           </div>
+                        </div>
+                        <img src="{% static 'images/blog/spade.png' %}" alt="Image" class="spade-two">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-6 col-xl-4">
+                  <div class="blog__single-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                     <div class="blog__single van-tilt">
+                        <div class="blog__single-thumb">
+                              <img src="{% static 'images/blog/three.png' %}" alt="Image">
+                        </div>
+                        <div class="blog__single-inner">
+                           <div class="blog__single-content">
+                              <h5><a href="">IT Service Case Studies Accelerate
+                                    Business Fly Success Tech</a>
+                              </h5>
+                           </div>
+                           <div class="blog__single-cta">
+                              <a href="" aria-label="blog details" title="blog details">Read
+                                 More<i class="fa-solid fa-circle-arrow-right"></i></a>
+                           </div>
+                        </div>
+                        <img src="{% static 'images/blog/spade.png' %}" alt="Image" class="spade-two">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-12">
+                  <div class="section__cta cta text-center">
+                     <a href="{% url 'our-blogs' %}" aria-label="our blog" title="our blog" class="btn--primary">View
+                        All <i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="blog-bg">
+            <img src="{% static 'images/blog/blog-bg.png' %}" alt="Image">
+         </div>
+         <div class="spade">
+            <img src="{% static 'images/blog/spade-base.png' %}" alt="Image" class="base-img">
+         </div>
+      </section>
+        <!-- ==== cta section start ==== -->
+        <section class="cta-section">
+         <div class="container-fluid">
+            <div class="row gutter-40">
+               <div class="col-12 col-xxl-4">
+                  <div class="cta-section__first cta-section__single">
+                     <div class="cta-section__group" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="thumb">
+                           <i class="icon-spread-love"></i>
+                        </div>
+                        <div class="content">
+                           <span>We give child a gift of a education</span>
+                           <h3 class="title-animation">Become a volunteer?</h3>
+                        </div>
+                        <div class="cta-s">
+                           <a href="{% url 'join-us' %}" aria-label="become a volunteer" title="become a volunteer"
+                              class="btn--tertiary">Join Now</a>
+                        </div>
+                     </div>
+                     <div class="cta-img">
+                        <img src="{% static 'images/cta/one.png' %}" alt="Image">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ==== / cta section end ==== -->
+ {% endblock %}

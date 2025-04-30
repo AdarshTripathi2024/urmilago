@@ -1,0 +1,94 @@
+{% extends 'urmilafoundation/base.html' %}
+{% block content %}
+{% load static %}
+   <!-- ==== banner section start ==== -->
+   <section class="common-banner">
+      <div class="container">
+         <div class="row">
+            <div class="common-banner__content text-center">
+               <span class="sub-title"><i class="icon-donation"></i>Start donating poor people</span>
+               <h2 class="title-animation">Admin Login Page</h2>
+            </div>
+         </div>
+      </div>
+      <div class="banner-bg">
+         <img src="{% static 'images/banner/banner-bg.png' %}" alt="Image">
+      </div>
+      <div class="shape">
+         <img src="{% static 'images/shape.png' %}" alt="Image">
+      </div>
+      <div class="sprade" data-aos="zoom-in" data-aos-duration="1000">
+         <img src="{% static 'images/sprade-base.png' %}" alt="Image" class="base-img">
+      </div>
+   </section>
+   <!-- ==== / banner section end ==== -->
+      <!-- ==== contact section start ==== -->
+      <section class="contact" id="contactSection">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-12 col-md-10 col-xl-7">
+                  <div class="contact__content">
+                     <div class="section__content"  data-aos="fade-up" data-aos-duration="1000">
+                        <span class="sub-title"><i class="icon-donation"></i>Start donating poor
+                           people</span>
+                        <h2   >Admin <span>Login</span> Here
+                        </h2>
+                     </div>
+                     <div class="contact__form cta" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" >
+                        {% if messages %}
+                           {% for message in messages %}
+                              <div class="{% if message.tags == 'error' %} alert alert-danger my-4{%  else %}alert alert-success my-4 {% endif %}">
+                                 {{ message }}
+                              </div>
+                           {% endfor %}
+                        {% endif %}
+                        <form method="post">
+                           {% csrf_token %}
+                           <div class="input-group">
+                              <div class="input-single">
+                                 <input type="text" name="username" id="username" placeholder="Admin ID" autocomplete="off">
+                                 <i class="fa-solid fa-user"></i>
+                              </div>
+                              <div class="input-single">
+                                 <input type="password" name="password" id="password"
+                                    placeholder="Admin Password..." autocomplete="off">
+                                 <i class="fa-solid fa-calculator"></i>
+                              </div>
+                           </div>        
+                           <div class="form-cta">
+                              <button type="submit" aria-label="submit message" title="submit message"
+                                 class="btn--primary">Login <i class="fa-solid fa-arrow-right"></i></button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="contact-bg">
+            <img src="{% static 'images/contact/contact-bg.png' %}" alt="Image" class="parallax-image">
+         </div>
+         <div class="shape-left" >
+            <img src="{% static 'images/cta/shape-left.png' %}" alt="Image" class="base-img">
+         </div>
+      </section>
+      <!-- ==== / contact section end ==== -->
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+             const params = new URLSearchParams(window.location.search);
+             const message = params.get('message');
+             if (message === 'logged_out') {
+                 // Using SweetAlert2 to show the alert
+                 Swal.fire({
+                     icon: 'success',
+                     title: 'Logged out successfully!',
+                     showConfirmButton: false,
+                     timer: 2000 // Automatically close after 2 seconds
+                 });
+     
+                 // Optional: Remove the query parameter from the URL
+                 history.replaceState(null, '', window.location.pathname);
+             }
+         });
+     </script>
+  {% endblock %}

@@ -1,0 +1,246 @@
+{% load static %} 
+<head>
+   <!-- required meta -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- #favicon -->
+   <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+   <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+   <!-- #title -->
+   <title>Urmila Foundation</title>
+   <!-- #keywords -->
+   <meta name="keywords" content="charity, nonprofit, fundraising, donation">
+   <!-- #description -->
+   <meta name="description" content="Nonprofit NGO Fundraising">
+   <!-- google fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com/">
+   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Outfit:wght@100..900&amp;display=swap"
+      rel="stylesheet"> <!-- main css -->
+   <link rel="stylesheet" href="{% static 'css/main.css' %}">
+   <!-- responsive css -->
+   <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+   <!-- color themes -->
+   <link rel="stylesheet" href="{% static 'css/default-theme.css' %}" id="switch-color">
+   <!-- want sticky header -->
+   <link rel="stylesheet" href="{% static 'css/sticky-header.css' %}">
+   <!-- box layout css -->
+   <link rel="stylesheet" href="{% static 'css/box-layout.css' %}">
+   <!-- dark mode css -->
+   <link rel="stylesheet" href="{% static 'css/dark-mode.css' %}">
+   <!-- rtl css -->
+   <link rel="stylesheet" href="{% static 'css/rtl.css' %}">
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+      <div class="page-wrapper">
+        <!-- ==== preloader start ==== -->
+        <div class="preloader">
+           <i class="icon-donation"></i>
+           <p>URMILA FOUNDATION</p>
+        </div>
+        <!-- ==== / preloader end ==== -->
+        <!-- ==== topbar start ==== -->
+        <div class="topbar topbar--secondary d-none d-lg-block">
+           <div class="container">
+              <div class="row">
+                 <div class="col-12">
+                    <div class="topbar__inner">
+                       <div class="row align-items-center">
+                          <div class="col-12 col-lg-6 col-xxl-4">
+                             <div class="topbar__list-wrapper">
+                                <ul class="topbar__list">
+                                   <li><a href="mailto:info@urmilafoundation.com"><i
+                                            class="fa-regular fa-envelope"></i>info@urmilafoundation.com</a>
+                                   </li>
+                                   <li><a href="tel:2305-587-3407"><i class="fa-solid fa-phone"></i>1234567890</a>
+                                   </li>
+                                </ul>
+                             </div>
+                          </div>
+                          <div class="col-12 col-xxl-4 d-none d-xxl-block">
+                             <div class="topbar__extra text-center">
+                                <p><i class="icon-heart-hand"></i> Are you ready to help them? Let's become a
+                                   volunteer!
+                                </p>
+                             </div>
+                          </div>
+                          <div class="col-12 col-lg-6 col-xxl-4">
+                             <div class="topbar__items justify-content-end">
+                                <div class="select-currency">
+                                    {% load tz %}
+                                   <p class="text-white">{% now "d-m-Y H:i A" %}</p>
+                                </div>
+                                <div class="social">
+                                   <a href="https://www.facebook.com/" target="_blank" aria-label="share us on facebook"
+                                      title="facebook">
+                                      <i class="fa-brands fa-facebook-f"></i>
+                                   </a>
+                                   <a href="" target="_blank" 
+                                      title="Youtube">
+                                      <i class="fa-brands fa-youtube"></i>
+                                   </a>
+                                   <a href="https://x.com/" target="_blank" aria-label="share us on twitter"
+                                      title="twitter">
+                                      <i class="fa-brands fa-twitter"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/" target="_blank" aria-label="share us on linkedin"
+                                      title="linkedin">
+                                      <i class="fa-brands fa-linkedin-in"></i>
+                                   </a>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <!-- ==== / topbar end ==== -->
+        <!-- ==== header start ==== -->
+        <header class="header header-secondary">
+           <div class="container">
+              <div class="row">
+                 <div class="col-12">
+                    <div class="main-header__menu-box">
+                       <nav class="navbar p-0">
+                          <div class="navbar-logo">
+                             <a href="{% url 'home' %}">
+                                <img src="{% static 'images/logo/urmila.png' %}" alt="Image">
+                             </a>
+                          </div>
+                          <div class="navbar__menu-wrapper">
+                             <div class="navbar__menu d-none d-xl-block">
+                                <ul class="navbar__list">
+                                   <li class="navbar__item">
+                                      <a href="{% url 'home' %}">Home</a>
+                                   </li>
+
+                                   <li class="navbar__item navbar__item--has-children nav-fade">
+                                      <a href="#" aria-label="dropdown menu"
+                                         class="navbar__dropdown-label dropdown-label-alter">About</a>
+                                      <ul class="navbar__sub-menu">
+                                         <li>
+                                            <a href="{% url 'about-us' %}">Our Foundation</a>
+                                         </li>
+                                         <li>
+                                            <a href="{% url 'our-team' %}">Our Team</a>
+                                         </li>
+                                         <li>
+                                            <a href="{% url 'our-director' %}">Our Director</a>
+                                         </li>
+                                      </ul>
+                                   </li>
+                                   <li class="navbar__item nav-fade">
+                                    <a href="{% url 'facility' %}">Facilities</a>
+                                 </li>
+                                   <li class="navbar__item navbar__item--has-children nav-fade">
+                                      <a href="#" aria-label="dropdown menu"
+                                         class="navbar__dropdown-label dropdown-label-alter">Activities</a>
+                                      <ul class="navbar__sub-menu">
+                                         <li>
+                                            <a href="{% url 'social-activities' %}">Social Activities</a>
+                                         </li>
+                                         <li>
+                                            <a href="{% url 'educational-activities' %}">Educational Activities</a>
+                                         </li>
+                                      </ul>
+                                   </li>
+                                   <li class="navbar__item navbar__item--has-children nav-fade">
+                                      <a href="#" aria-label="dropdown menu"
+                                         class="navbar__dropdown-label dropdown-label-alter">Media</a>
+                                      <ul class="navbar__sub-menu">
+                                       <li>
+                                          <a href="{% url 'our-blogs' %}">Our Blogs </a>
+                                       </li>
+                                         <li>
+                                            <a href="{% url 'photo-gallery' %}">Photo Gallery</a>
+                                         </li>
+                                         <li>
+                                            <a href="{% url 'e-gallery' %}">E-Gallery</a>
+                                         </li>
+                                      </ul>
+                                   </li>
+                                   <li class="navbar__item nav-fade navbar__item--has-children">
+                                      <a href="#" aria-label="dropdown menu"
+                                      class="navbar__dropdown-label dropdown-label-alter">Contact Us</a>
+                                      <ul class="navbar__sub-menu">
+                                       <li>
+                                          <a href="{% url 'contact-us' %}">Contact Us</a>
+                                       </li>
+                                       <li>
+                                          <a href="{% url 'join-us' %}">Join Us</a>
+                                       </li>
+                                    </ul>
+                                   </li>
+                                </ul>
+                             </div>
+                             <div class="contact-btn">
+                                <div class="contact-icon">
+                                   <i class="icon-support"></i>
+                                </div>
+                                <div class="contact-content">
+                                   <p>Call Us Now</p>
+                                   <a href="tel:01-793-7938">(+01)-793-7938 </a>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="navbar__options">
+                             <div class="navbar__mobile-options ">
+                                <a href="{% url 'donate-us' %}" class="btn--primary d-none d-md-flex">Donate Now <i
+                                      class="fa-solid fa-arrow-right"></i></a>
+                             </div>
+                             <button class="open-offcanvas-nav d-flex d-xl-none" aria-label="toggle mobile menu"
+                                title="open offcanvas menu">
+                                <span class="icon-bar top-bar"></span>
+                                <span class="icon-bar middle-bar"></span>
+                                <span class="icon-bar bottom-bar"></span>
+                             </button>
+                          </div>
+                       </nav>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </header>
+        <!-- ==== / header end ==== -->
+        <!-- ==== mobile menu start ==== -->
+        <div class="mobile-menu mobile-menu--primary d-block d-xxl-none">
+           <nav class="mobile-menu__wrapper">
+              <div class="mobile-menu__header nav-fade">
+                 <div class="logo">
+                    <a href="{% url 'home' %}" aria-label="home page" title="logo">
+                       <img src="{% static 'images/logo/urmilafoundation_logo.png' %}" alt="Image">
+                    </a>
+                 </div>
+                 <button aria-label="close mobile menu" class="close-mobile-menu">
+                    <i class="fa-solid fa-xmark"></i>
+                 </button>
+              </div>
+              <div class="mobile-menu__list"></div>
+              <div class="mobile-menu__cta nav-fade d-block d-md-none">
+                 <a href="{% url 'donate-us' %}" class="btn--primary ">Donate Now <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="mobile-menu__social social nav-fade">
+                 <a href="https://www.facebook.com/" target="_blank" aria-label="share us on facebook" title="facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                 </a>
+                 <a href="" target="_blank" aria-label="Urmila Foundation Youtube channel" title="Urmila Foundation Youtube channel">
+                    <i class="fa-brands fa-youtube"></i>
+                 </a>
+                 <a href="https://x.com/" target="_blank" aria-label="Urmila Foundation X account" title="Urmila Foundation X Account">
+                    <i class="fa-brands fa-twitter"></i>
+                 </a>
+                 <a href="https://www.linkedin.com/" target="_blank" aria-label="share us on linkedin" title="linkedin">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                 </a>
+              </div>
+           </nav>
+        </div>
+        <div class="mobile-menu__backdrop"></div>
+        <!-- ==== / mobile menu end ==== -->
+        

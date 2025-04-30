@@ -1,0 +1,210 @@
+{% extends 'myadmin/base.html' %}
+{% block content %}
+{% load static %}
+     <!-- ==== banner section start ==== -->
+     <section class="common-banner">
+        <div class="container">
+           <div class="row">
+              <div class="common-banner__content text-center">
+                 <span class="sub-title"><i class="icon-donation"></i>Start donating poor people</span>
+                 <h2 class="title-animation">Upload Blogs
+                 </h2>
+              </div>
+           </div>
+        </div>
+        <div class="banner-bg">
+           <img src="{% static 'images/banner/banner-bg.png' %} " alt="Image">
+        </div>
+        <div class="shape">
+           <img src="{% static 'images/shape.png' %} " alt="Image">
+        </div>
+        <div class="sprade" data-aos="zoom-in" data-aos-duration="1000">
+           <img src="{% static 'images/sprade-base.png' %} " alt="Image" class="base-img">
+        </div>
+     </section>
+     <!-- ==== / banner section end ==== -->
+      <!-- ==== donate us section start ==== -->
+         <div class="cm-details donate-us community checkout faq">
+            <div class="container">
+               <div class="row gutter-60">
+                  <div class="col-12 col-xl-12">
+                     <div class="cm-details__content">
+                        <div class="donate-inner">
+                        <h2>Upload Blog Content</h2>
+                           <div class="cta">
+                              <div class="community-donation">
+                                 <div class="checkout__form">
+                                    <form id="blog_form" enctype="multipart/form-data" method="post">
+                                       {% csrf_token %}
+                                       <div class="input-group">
+                                          <div class="input-single">
+                                             <input type="text" name="title" id="title" placeholder="Blog's Title or Heading" required>
+                                             <i class="fa-solid fa-heading"></i>
+                                             <span id="titleerror" class="text-danger"></span>
+                                          </div>
+                                          <div class="input-single">
+                                             <select name="type" id="type"  required>
+                                                <option value="">Select Blog Type</option>
+                                                <option value="Social">Social</option>
+                                                <option value="Educational">Educational</option>
+                                             </select>
+                                             <span id="typeerror" class="text-danger"></span>
+                                          </div>
+                                       </div>
+                                       <div class="input-group">
+                                          <div class="input-single">
+                                             <input type="text" name="first" id="first" placeholder="Blog's First Stranza" required>
+                                             <i class="fa-solid fa-"></i>
+                                             <span id="firsterror" class="text-danger"></span>
+                                          </div>
+                                       </div>
+                                       <div class="input-group">
+                                          <div class="input-single">
+                                             <input type="text" name="second" id="second" placeholder="Blog's Second Stranza"
+                                                required>
+                                             <i class="fa-solid fa-"></i>
+                                             <span id="seconderror" class="text-danger"></span>
+                                          </div>
+                                       </div>
+                                       <div class="input-single alter-input">
+                                          <textarea name="conclusion" id="conclusion"
+                                             placeholder="Last Paragraph as Conclusion..."></textarea>
+                                          <i class="fa-solid fa-envelope"></i>
+                                          <span id="conclusionerror" class="text-danger"></span>
+                                       </div>
+                                       <div class="input-single">
+                                          <input type="file" name="image" id="image"
+                                             placeholder="Upload the Image" required>
+                                          <i class="fa-solid fa-image"></i>
+                                          <span id="imageerror" class="text-danger"></span>
+                                       </div>
+                                       <div class="form-cta">
+                                          <button type="submit" aria-label="submit message" title="submit message"
+                                             class="btn--primary">Save the Blog <i
+                                                class="fa-solid fa-arrow-right"></i>
+                                          </button>
+                                       </div>
+                                    </form>
+                                 </div>
+                                 <div id="msg"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  {% if messages %}
+                     {% for message in messages %}
+                     <div class="alert alert-success text-center">{{ message }}</div>
+                     {% endfor %}
+                  {% endif %}
+                
+                  <div class="col-md-12">
+                     <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                           <thead>
+                              <tr>
+                                 <th>#</th>
+                                 <th>Blog Title</th>
+                                 <th>Created On</th>
+                                 <th>Action</th>
+                                 <th>Action</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                             {% for blog in blogs %}
+                              <tr>
+                                 <td>{{ forloop.counter }}</td>
+                                 <td>{{ blog.title }}</td>
+                                 <td>{{ blog.submitted_at }}</td>
+                                 <td><a href="{% url 'delete-blog' blog.id %}" class="btn btn-danger" onclick='
+                                    event.preventDefault(); 
+                                    Swal.fire({
+                                      title: "Are you sure?",
+                                      text: "Blog will be deleted Permanently!",
+                                      icon: "warning",
+                                      showCancelButton: true,
+                                      confirmButtonColor: "#3085d6",
+                                      cancelButtonColor: "#d33",
+                                      confirmButtonText: "Yes, delete it!"
+                                      }).then((result) => {
+                                      if (result.isConfirmed) {
+                                       window.location.href = "{% url 'delete-blog' blog.id %}";
+                                      }
+                                      });
+                                    '><i class="fa-solid fa-trash"></i></a></td>
+                                 <td><a href="{% url 'edit-blog' blog.id %}" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                              </tr>
+                              {% endfor %}
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <script>
+            $(document).ready(function(){
+          $('#blog_form').on('submit', function(e){
+              e.preventDefault();
+              var formData = new FormData(this);
+              var csrftoken = getCSRFToken();
+              $.ajax({
+                  url: "{% url 'upload-blog' %}",
+                  type: 'POST',
+                  data: formData,
+                  contentType: false,  // Prevent jQuery from processing the content type
+                  processData: false,
+                  headers: { "X-CSRFToken": csrftoken }, 
+                  success: function(response){
+                    
+                      if (response.status === "success") {
+                          $('#msg').html('<div class="alert alert-success my-4">Blog Uploaded successfully through ajax!</div>');
+                          $('#blog_form')[0].reset();  // Reset the form on success
+                          console.log('Success');
+                      } else {
+                          console.log('validation error');
+                          if (response.errors.title) {
+                              $('#titleerror').html(response.errors.title);
+                          }
+                          if (response.errors.first) {
+                              $('#firsterror').html(response.errors.first);
+                          }
+                          if (response.errors.second) {
+                              $('#seconderror').html(response.errors.second);
+                          }
+                          if (response.errors.conclusion) {
+                              $('#conclusionerror').html(response.errors.conclusion);
+                          }
+                          if (response.errors.image) {
+                              $('#imageerror').html(response.errors.image);
+                          }
+                          if (response.errors.type) {
+                              $('#typeerror').html(response.errors.type);
+                          }
+                      }
+                  },
+                  error: function(xhr, status, error){
+                      console.log('error occured');
+                      $('#blog_form')[0].reset();  
+                      $('#msg').html('<div class="alert alert-danger my-4">An error occurred: ' + error + '</div>');
+                    
+                  }
+              });
+          });
+          function getCSRFToken() {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                  let cookies = document.cookie.split(';');
+                  for (let i = 0; i < cookies.length; i++) {
+                     let cookie = cookies[i].trim();
+                     if (cookie.startsWith('csrftoken=')) {
+                        cookieValue = cookie.substring(10);
+                        break;
+                     }
+                  }
+            }
+            return cookieValue;
+         }
+      });
+      </script>
+{% endblock %}
