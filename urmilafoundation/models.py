@@ -29,6 +29,8 @@ class Subscriber(models.Model):
     id=models.AutoField(primary_key=True)
     email= models.EmailField(unique =True)
     is_verified = models.BooleanField(default =False)
+    otp = models.CharField(max_length=10 , blank=True, null=True)
+    otp_created = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add =True)
     
     class Meta:

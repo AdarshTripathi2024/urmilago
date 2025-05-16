@@ -1,9 +1,9 @@
 from django.shortcuts import render,redirect, get_object_or_404
-from .models import Contact,Join
+from .models import Contact,Join,Subscriber
 from myadmin.models import Blog
 from django.contrib import messages
 from django.http import JsonResponse, HttpResponseNotAllowed
-from .emails import send_otp_email
+from .emails import send_otp_email,generate_otp
 from django.views.decorators.http import require_POST
 
 # Create your views here.
@@ -108,32 +108,50 @@ def subscribe(request):
     if request.method != 'POST':
         return HttpResponseNotAllowed(['POST'])
     email = request.POST.get('email')
-    # errors=[]
-    # if @ not in email:
-    #     errors['email'] = 'Enter Not a valid Email'
+    errors={}
+    if '@' not in email:
+        errors['email'] = 'Enter a valid email address.'
+    if errors:
+        return JsonResponse({'status': 'error', 'errors': errors}, status=400)
     otp = generate_otp()
     subscriber, created = Subscriber.objects.get_or_create(email=email)
     if subscriber:
-        if subscriber.verified:
-            return JsonResponse({'message': 'Already subscribed'})
-        else:
-            # Resend OTP
-            return JsonResponse({'message': 'OTP resent for verification'})
-    else:
-        # Create new unverified subscriber and send OTP
-        Subscriber.objects.create(email=email, verified=False)
-        return JsonResponse({'message': 'OTP sent for verification'})
+        if subscriber.is_verified:
+            return JsonResponse({
+            'status': 'success',
+            'message': 'Already subscribed.'
+        })
+    subscriber.otp = otp
+    subscriber.verified = False
+    subscriber.save()
+    try:
+        send_otp_email(email, otp)
+    except Exception as e:
+        return JsonResponse({'status': 'error', 'message': 'Failed to send OTP email. Please try again.'}, status=500)
+    message = 'OTP sent for verification.' if created else 'OTP resent for verification.'
+    return JsonResponse({
+        'status': 'success',
+        'message': message,
+        'email': email
+    })
 
 @require_POST
-def verify_otp(request, email):
-    user_otp =request.POST.get('otp')
+def verify_otp(request):
+    email = request.POST.get('email')
+    user_otp = request.POST.get('otp')
+
+    if not email or not user_otp:
+        return JsonResponse({'status': 'error', 'message': 'Email and OTP are required.'}, status=400)
+
     try:
-        subscriber = Subscriber.objects.get(email= email)
+        subscriber = Subscriber.objects.get(email=email)
         if subscriber.otp == user_otp:
             subscriber.is_verified = True
             subscriber.otp = ''
             subscriber.save()
-            return JsonResponse({'message':'Successfully subscribed for the newletter'})
+            return JsonResponse({'status': 'success', 'message': 'Successfully subscribed to the newsletter.'})
+        else:
+            return JsonResponse({'status': 'error', 'message': 'Invalid OTP.'}, status=400)
 
     except Subscriber.DoesNotExist:
-        return JsonResponse({'message': 'Some thing went wrong'})
+        return JsonResponse({'status': 'error', 'message': 'Email not found.'}, status=404)
